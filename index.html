@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club d'Échecs - Lycée</title>
+
+  <!-- Fonts & Tailwind CDN (utility classes) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-charcoal text-ivory">
+
+  <!-- Navbar -->
+  <nav class="bg-charcoal-light shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#accueil" class="flex items-center space-x-2">
+        <!--
+          <img src="https://placehold.co/40x40/ffc560/000000?text=♕" alt="Logo" class="rounded-full" />
+        -->
+        <img src="images/logo-cavalier.png" alt="Logo Club d'Échecs" class="rounded-full w-10 h-10" />
+        <span class="text-xl font-bold text-ivory">Club d'Échecs</span>
+      </a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#accueil" class="nav-link text-ivory hover:text-sandy">Accueil</a>
+        <a href="#evenements" class="nav-link text-ivory hover:text-sandy">Événements</a>
+        <a href="#scores" class="nav-link text-ivory hover:text-sandy">Scores</a>
+        <a href="#cours" class="nav-link text-ivory hover:text-sandy">Cours</a>
+        <a href="#challenge" class="nav-link text-ivory hover:text-sandy">Challenge</a>
+        <a href="#elo" class="nav-link text-ivory hover:text-sandy">Progression ELO</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-ivory focus:outline-none" aria-label="Ouvrir le menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-charcoal-light p-4 shadow-lg absolute w-full z-40">
+    <a href="#accueil" class="block py-2 text-ivory hover:text-sandy">Accueil</a>
+    <a href="#evenements" class="block py-2 text-ivory hover:text-sandy">Événements</a>
+    <a href="#scores" class="block py-2 text-ivory hover:text-sandy">Scores</a>
+    <a href="#cours" class="block py-2 text-ivory hover:text-sandy">Cours</a>
+    <a href="#challenge" class="block py-2 text-ivory hover:text-sandy">Challenge</a>
+    <a href="#elo" class="block py-2 text-ivory hover:text-sandy">Progression ELO</a>
+  </div>
+
+  <!-- Hero Section (Accueil) -->
+  <header id="accueil" class="relative overflow-hidden">
+    <div class="bg-pattern absolute inset-0 -z-10 opacity-10"></div>
+    <div class="container mx-auto px-6 py-20 md:py-32 relative z-10 text-center flex flex-col items-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-sandy leading-tight mb-4">
+        Bienvenue au Club d'Échecs du Lycée !
+      </h1>
+      <p class="text-lg md:text-xl text-ivory max-w-2xl mx-auto mb-8">
+        Développez votre esprit stratégique, rencontrez des passionnés et participez à nos événements. Rejoignez-nous pour découvrir l'art du jeu d'échecs !
+      </p>
+      <a href="#evenements" class="bg-sandy text-charcoal font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300">
+        Découvrez nos Événements
+      </a>
+    </div>
+  </header>
+
+  <!-- Evénements Section -->
+  <section id="evenements" class="py-16 bg-charcoal">
+    <div class="container">
+      <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 text-center">Nos Événements</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Evénement 1 -->
+        <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
+          <h3 class="text-2xl font-bold text-sandy mb-2">Tournoi Inter-Lycées</h3>
+          <p class="text-sm text-ivory mb-4">Date : 15 novembre 2025</p>
+          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Tournoi+d'Echecs" alt="Tournoi d'échecs en cours" class="rounded-lg mb-4 w-full h-40 object-cover" />
+          <p class="text-ivory">Affrontez les meilleurs joueurs des lycées voisins et remportez la victoire pour notre club ! Un événement plein de stratégie et de suspense.</p>
+        </div>
+        <!-- Evénement 2 -->
+        <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
+          <h3 class="text-2xl font-bold text-sandy mb-2">Masterclass avec un Pro</h3>
+          <p class="text-sm text-ivory mb-4">Date : 30 novembre 2025</p>
+          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Cours+d'Echecs" alt="Un grand maître enseigne les échecs" class="rounded-lg mb-4 w-full h-40 object-cover" />
+          <p class="text-ivory">Une occasion unique d'apprendre des techniques avancées et de poser vos questions à un grand maître local. Places limitées !</p>
+        </div>
+        <!-- Evénement 3 -->
+        <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
+          <h3 class="text-2xl font-bold text-sandy mb-2">Soirée Échecs & Pizzas</h3>
+          <p class="text-sm text-ivory mb-4">Date : 15 décembre 2025</p>
+          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Soirée+Échecs+%26+Pizzas" alt="Ambiance conviviale avec échecs et pizzas" class="rounded-lg mb-4 w-full h-40 object-cover" />
+          <p class="text-ivory">Détente et convivialité ! Venez jouer des parties informelles tout en savourant de délicieuses pizzas avec tous les membres du club.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scores Section -->
+  <section id="scores" class="py-16 bg-charcoal-light">
+    <div class="container">
+      <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 text-center">Classements & Scores</h2>
+      <div class="bg-charcoal rounded-xl shadow-lg p-6">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left table-auto">
+            <thead>
+              <tr class="bg-sandy text-charcoal rounded-xl">
+                <th class="py-3 px-4 rounded-tl-lg">Rang</th>
+                <th class="py-3 px-4">Nom</th>
+                <th class="py-3 px-4">Points</th>
+                <th class="py-3 px-4 rounded-tr-lg">Classe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-ivory/20">
+                <td class="py-4 px-4 text-ivory">1</td>
+                <td class="py-4 px-4 text-sandy font-semibold">Jean Dupont</td>
+                <td class="py-4 px-4 text-ivory">185</td>
+                <td class="py-4 px-4 text-ivory">Terminale A</td>
+              </tr>
+              <tr class="border-b border-ivory/20">
+                <td class="py-4 px-4 text-ivory">2</td>
+                <td class="py-4 px-4 text-ivory">Marie Lefèvre</td>
+                <td class="py-4 px-4 text-ivory">170</td>
+                <td class="py-4 px-4 text-ivory">Seconde B</td>
+              </tr>
+              <tr class="border-b border-ivory/20">
+                <td class="py-4 px-4 text-ivory">3</td>
+                <td class="py-4 px-4 text-ivory">Thomas Martin</td>
+                <td class="py-4 px-4 text-ivory">150</td>
+                <td class="py-4 px-4 text-ivory">Première C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <p class="text-ivory text-xl mb-4">Félicitations aux meilleurs joueurs du mois !</p>
+        <img src="https://placehold.co/600x400/1a202c/ffc560?text=Trophée+des+Gagnants" alt="Un trophée et des médailles" class="rounded-lg mx-auto w-full md:w-1/2 object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Cours Section -->
+  <section id="cours" class="py-16 bg-charcoal">
+    <div class="container">
+      <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 text-center">Apprendre & Progresser</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Débutants -->
+        <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
+          <h3 class="text-2xl font-bold text-sandy mb-4">Pour les Débutants</h3>
+          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Apprendre+les+Bases" alt="Un échiquier avec des pièces de base" class="rounded-lg mb-4 w-full h-48 object-cover" />
+          <p class="text-ivory mb-4">Vous n'avez jamais joué aux échecs ? Pas de problème ! Nous vous guiderons à travers les bases : les mouvements de chaque pièce, les règles et la stratégie de base pour votre première partie.</p>
+          <ul class="list-disc list-inside text-ivory space-y-2">
+            <li>Les mouvements du Cavalier, du Fou et du Roi.</li>
+            <li>Les règles spéciales (roque, prise en passant).</li>
+            <li>Stratégies simples pour un bon démarrage.</li>
+          </ul>
+        </div>
+        <!-- Confirmés -->
+        <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
+          <h3 class="text-2xl font-bold text-sandy mb-4">Pour les Confirmés</h3>
+          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Stratégies+Avancées" alt="Une position de jeu d'échecs complexe" class="rounded-lg mb-4 w-full h-48 object-cover" />
+          <p class="text-ivory mb-4">Vous voulez passer au niveau supérieur ? Nos cours avancés couvrent les ouvertures complexes, les tactiques, les finales et l'analyse de parties de grands maîtres pour améliorer votre jeu.</p>
+          <ul class="list-disc list-inside text-ivory space-y-2">
+            <li>Les meilleures ouvertures et défenses.</li>
+            <li>Tactiques avancées : clouage, fourchette, etc.</li>
+            <li>Maîtriser les finales de partie.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenge Section -->
+  <section id="challenge" class="py-16 bg-charcoal-light">
+    <div class="container">
+      <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 text-center">Challenge de la Semaine</h2>
+      <div class="flex flex-col items-center p-6 bg-charcoal rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold text-sandy mb-4 text-center">Les Blancs jouent et matent en 3 coups.</h3>
+        <img src="https://placehold.co/600x400/1a202c/ffc560?text=Problème+d'Echecs" alt="Diagramme d'échecs" class="rounded-lg mb-6 w-full md:w-2/3 object-cover" />
+
+        <button id="solution-button" class="bg-sandy text-charcoal font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300">
+          Afficher la solution
+        </button>
+
+        <div id="solution-box" class="hidden mt-6 p-4 border-2 border-sandy rounded-lg text-ivory w-full md:w-2/3">
+          <h4 class="text-xl font-semibold mb-2 text-sandy">Solution :</h4>
+          <p class="mb-4">
+            1. Dxg7+! (le Roi noir est forcé de se déplacer)<br />
+            2. Rf8 (seul coup)<br />
+            3. Dxf7# (mat !)
+          </p>
+          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Solution+du+Challenge" alt="Diagramme de la solution" class="rounded-lg w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELO Section (intégration d'evolution1) -->
+  <section id="elo" class="py-16 bg-charcoal">
+    <div class="container">
+      <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 text-center">Progression du score ELO</h2>
+
+      <div class="flex flex-col md:flex-row items-center justify-center mb-8 space-y-4 md:space-y-0 md:space-x-4">
+        <label for="student-select" class="text-xl text-ivory">Sélectionnez un élève :</label>
+        <select id="student-select" class="bg-charcoal text-ivory border-2 border-sandy rounded-lg p-2 focus:outline-none">
+          <!-- Options générées par script.js -->
+        </select>
+      </div>
+
+      <div class="relative bg-charcoal rounded-xl p-4 md:p-8 shadow-inner min-h-[320px]">
+        <canvas id="elo-chart" aria-label="Graphique de progression ELO"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal-light text-ivory text-center py-6 mt-12">
+    <p>&copy; 2025 Club d'Échecs du Lycée. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Vendor: Chart.js for ELO chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Site script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -71,14 +71,14 @@ body {
 /* Background pattern (hero) */
 /*.bg-pattern {
   background-image: url('https://placehold.co/1200x800/0b121f/ffc560?text=Echiquier');
-  background-image: url('images/duel_street-800.webp');
+  background-image: url('/images/duel_street-800.webp');
   background-size: cover;
   background-position: center;
 }
 */
 
 .bg-pattern {
-  background-image: url('images/groupe_hero_baner.webp');
+  background-image: url('/images/groupe_hero_baner.webp');
   /* mobile par défaut */
   background-size: contain;
   background-repeat: no-repeat;
@@ -87,7 +87,7 @@ body {
 
 @media (min-width: 1024px) {
   .bg-pattern {
-    background-image: url('images/groupe_hero_baner.webp');
+    background-image: url('/images/groupe_hero_baner.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: middle center;

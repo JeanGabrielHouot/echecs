@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,16 +13,14 @@
   <!-- Site styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="bg-charcoal text-ivory">
 
   <!-- Navbar -->
-  <nav class="bg-charcoal-light shadow-lg sticky top-0 z-50">
+  <nav class="bg-charcoal-light shadow-lg sticky top-0 z-50 relative">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#accueil" class="flex items-center space-x-2">
-        <!--
-          <img src="https://placehold.co/40x40/ffc560/000000?text=♕" alt="Logo" class="rounded-full" />
-        -->
-        <img src="logo-cavalier.png" alt="Logo Club d'Échecs" class="rounded-full w-10 h-10" />
+        <img src="images/logo-cavalier.png" alt="Logo Club d'Échecs" class="rounded-full w-10 h-10" />
         <span class="text-xl font-bold text-ivory">Club d'Échecs</span>
       </a>
       <div class="hidden md:flex space-x-6">
@@ -40,31 +39,38 @@
         </button>
       </div>
     </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden absolute left-0 right-0 top-full bg-charcoal-light p-4 shadow-lg z-40">
+      <a href="#accueil" class="block py-2 text-ivory hover:text-sandy">Accueil</a>
+      <a href="#evenements" class="block py-2 text-ivory hover:text-sandy">Événements</a>
+      <a href="#scores" class="block py-2 text-ivory hover:text-sandy">Scores</a>
+      <a href="#cours" class="block py-2 text-ivory hover:text-sandy">Cours</a>
+      <a href="#challenge" class="block py-2 text-ivory hover:text-sandy">Challenge</a>
+      <a href="#elo" class="block py-2 text-ivory hover:text-sandy">Progression ELO</a>
+    </div>
+
   </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-charcoal-light p-4 shadow-lg absolute w-full z-40">
-    <a href="#accueil" class="block py-2 text-ivory hover:text-sandy">Accueil</a>
-    <a href="#evenements" class="block py-2 text-ivory hover:text-sandy">Événements</a>
-    <a href="#scores" class="block py-2 text-ivory hover:text-sandy">Scores</a>
-    <a href="#cours" class="block py-2 text-ivory hover:text-sandy">Cours</a>
-    <a href="#challenge" class="block py-2 text-ivory hover:text-sandy">Challenge</a>
-    <a href="#elo" class="block py-2 text-ivory hover:text-sandy">Progression ELO</a>
-  </div>
 
   <!-- Hero Section (Accueil) -->
   <header id="accueil" class="relative overflow-hidden">
-    <div class="bg-pattern absolute inset-0 -z-10 opacity-10"></div>
+    <div class="bg-pattern absolute inset-0 -z-10 opacity-50"></div>
     <div class="container mx-auto px-6 py-20 md:py-32 relative z-10 text-center flex flex-col items-center">
       <h1 class="text-4xl md:text-6xl font-extrabold text-sandy leading-tight mb-4">
-        Bienvenue au Club d'Échecs du Lycée !
+        Bienvenue au Club d'Échecs !
       </h1>
       <p class="text-lg md:text-xl text-ivory max-w-2xl mx-auto mb-8">
-        Développez votre esprit stratégique, rencontrez des passionnés et participez à nos événements. Rejoignez-nous pour découvrir l'art du jeu d'échecs !
+        Développez votre esprit stratégique, rencontrez des passionnés et participez à nos événements. Rejoignez-nous
+        pour découvrir l'art du jeu d'échecs !
       </p>
-      <a href="#evenements" class="bg-sandy text-charcoal font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300">
+
+      <a href="#evenements" class="bg-sandy text-charcoal font-bold py-3 px-8 rounded-full shadow-lg border-2 border-sandy 
+          hover:bg-white hover:text-black hover:shadow-xl transition-all duration-300">
         Découvrez nos Événements
       </a>
+
     </div>
   </header>
 
@@ -75,24 +81,29 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Evénement 1 -->
         <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
-          <h3 class="text-2xl font-bold text-sandy mb-2">Tournoi Inter-Lycées</h3>
+          <h3 class="text-2xl font-bold text-sandy mb-2">Tournoi Du Lycée</h3>
           <p class="text-sm text-ivory mb-4">Date : 15 novembre 2025</p>
-          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Tournoi+d'Echecs" alt="Tournoi d'échecs en cours" class="rounded-lg mb-4 w-full h-40 object-cover" />
-          <p class="text-ivory">Affrontez les meilleurs joueurs des lycées voisins et remportez la victoire pour notre club ! Un événement plein de stratégie et de suspense.</p>
+          <img src="images/tournoi.webp" alt="Tournoi d'échecs en cours" class="rounded-lg mb-4 w-full object-cover" />
+          <p class="text-ivory">Affrontez les meilleurs joueurs de votre catégorie et remportez un des prix ! Un
+            événement plein de stratégie et de suspense.</p>
         </div>
         <!-- Evénement 2 -->
         <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
-          <h3 class="text-2xl font-bold text-sandy mb-2">Masterclass avec un Pro</h3>
+          <h3 class="text-2xl font-bold text-sandy mb-2">Cours d'Echecs</h3>
           <p class="text-sm text-ivory mb-4">Date : 30 novembre 2025</p>
-          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Cours+d'Echecs" alt="Un grand maître enseigne les échecs" class="rounded-lg mb-4 w-full h-40 object-cover" />
-          <p class="text-ivory">Une occasion unique d'apprendre des techniques avancées et de poser vos questions à un grand maître local. Places limitées !</p>
+          <img src="images/cours_groupe.webp" alt="Un grand maître enseigne les échecs"
+            class="rounded-lg mb-4 w-full object-cover" />
+          <p class="text-ivory">Une occasion unique d'apprendre des techniques avancées et de poser vos questions à un
+            grand maître local. Places limitées !</p>
         </div>
         <!-- Evénement 3 -->
         <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
           <h3 class="text-2xl font-bold text-sandy mb-2">Soirée Échecs & Pizzas</h3>
           <p class="text-sm text-ivory mb-4">Date : 15 décembre 2025</p>
-          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Soirée+Échecs+%26+Pizzas" alt="Ambiance conviviale avec échecs et pizzas" class="rounded-lg mb-4 w-full h-40 object-cover" />
-          <p class="text-ivory">Détente et convivialité ! Venez jouer des parties informelles tout en savourant de délicieuses pizzas avec tous les membres du club.</p>
+          <img src="images/groupe_pizza.webp" alt="Ambiance conviviale avec échecs et pizzas"
+            class="rounded-lg mb-4 w-full object-cover" />
+          <p class="text-ivory">Détente et convivialité ! Venez jouer des parties informelles tout en savourant de
+            délicieuses pizzas avec tous les membres du club.</p>
         </div>
       </div>
     </div>
@@ -138,7 +149,8 @@
       </div>
       <div class="mt-8 text-center">
         <p class="text-ivory text-xl mb-4">Félicitations aux meilleurs joueurs du mois !</p>
-        <img src="https://placehold.co/600x400/1a202c/ffc560?text=Trophée+des+Gagnants" alt="Un trophée et des médailles" class="rounded-lg mx-auto w-full md:w-1/2 object-cover" />
+        <img src="images/coupe_tournoi.webp"
+          alt="Un trophée et des médailles" class="rounded-lg mx-auto w-full md:w-1/2 object-cover" />
       </div>
     </div>
   </section>
@@ -151,8 +163,13 @@
         <!-- Débutants -->
         <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
           <h3 class="text-2xl font-bold text-sandy mb-4">Pour les Débutants</h3>
-          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Apprendre+les+Bases" alt="Un échiquier avec des pièces de base" class="rounded-lg mb-4 w-full h-48 object-cover" />
-          <p class="text-ivory mb-4">Vous n'avez jamais joué aux échecs ? Pas de problème ! Nous vous guiderons à travers les bases : les mouvements de chaque pièce, les règles et la stratégie de base pour votre première partie.</p>
+          <img src="images/cours_fille_1.webp" alt="Un échiquier avec des pièces de base"
+            class="rounded-lg mb-4 w-full aspect-square object-cover md:w-3/5 mx-auto" />
+
+
+          <p class="text-ivory mb-4">Vous n'avez jamais joué aux échecs ? Pas de problème ! Nous vous guiderons à
+            travers les bases : les mouvements de chaque pièce, les règles et la stratégie de base pour votre première
+            partie.</p>
           <ul class="list-disc list-inside text-ivory space-y-2">
             <li>Les mouvements du Cavalier, du Fou et du Roi.</li>
             <li>Les règles spéciales (roque, prise en passant).</li>
@@ -162,8 +179,11 @@
         <!-- Confirmés -->
         <div class="card rounded-xl p-6 shadow-lg bg-charcoal-light border-sandy">
           <h3 class="text-2xl font-bold text-sandy mb-4">Pour les Confirmés</h3>
-          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Stratégies+Avancées" alt="Une position de jeu d'échecs complexe" class="rounded-lg mb-4 w-full h-48 object-cover" />
-          <p class="text-ivory mb-4">Vous voulez passer au niveau supérieur ? Nos cours avancés couvrent les ouvertures complexes, les tactiques, les finales et l'analyse de parties de grands maîtres pour améliorer votre jeu.</p>
+          <img src="images/cours_fille_2.webp" alt="Un échiquier avec des pièces de base"
+            class="rounded-lg mb-4 w-full aspect-square object-cover md:w-3/5 mx-auto" />
+          <p class="text-ivory mb-4">Vous voulez passer au niveau supérieur ? Nos cours avancés couvrent les ouvertures
+            complexes, les tactiques, les finales et l'analyse de parties de grands maîtres pour améliorer votre jeu.
+          </p>
           <ul class="list-disc list-inside text-ivory space-y-2">
             <li>Les meilleures ouvertures et défenses.</li>
             <li>Tactiques avancées : clouage, fourchette, etc.</li>
@@ -180,20 +200,23 @@
       <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 text-center">Challenge de la Semaine</h2>
       <div class="flex flex-col items-center p-6 bg-charcoal rounded-xl shadow-lg">
         <h3 class="text-2xl font-bold text-sandy mb-4 text-center">Les Blancs jouent et matent en 3 coups.</h3>
-        <img src="https://placehold.co/600x400/1a202c/ffc560?text=Problème+d'Echecs" alt="Diagramme d'échecs" class="rounded-lg mb-6 w-full md:w-2/3 object-cover" />
+        <img src="/images/enigmes/clouage_challenge.jpg" alt="Diagramme d'échecs"
+          class="rounded-lg mb-6 w-full md:w-2/3 object-cover" />
 
-        <button id="solution-button" class="bg-sandy text-charcoal font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:shadow-xl transition-all duration-300">
+        <button id="solution-button"
+          class="bg-sandy text-charcoal font-bold py-3 px-8 rounded-full shadow-lg border-2 border-sandy hover:bg-white hover:text-black hover:shadow-xl transition-all duration-300">
           Afficher la solution
         </button>
 
         <div id="solution-box" class="hidden mt-6 p-4 border-2 border-sandy rounded-lg text-ivory w-full md:w-2/3">
           <h4 class="text-xl font-semibold mb-2 text-sandy">Solution :</h4>
           <p class="mb-4">
-            1. Dxg7+! (le Roi noir est forcé de se déplacer)<br />
-            2. Rf8 (seul coup)<br />
-            3. Dxf7# (mat !)
+            1. Txh3+ <br />
+            2. Rg1 (seul coup)<br />
+            3. La dame blanche ne peut pas capturer la tour car elle est clouée par la dame noire en a8.
           </p>
-          <img src="https://placehold.co/600x400/1a202c/ffc560?text=Solution+du+Challenge" alt="Diagramme de la solution" class="rounded-lg w-full" />
+          <img src="images/enigmes/clouage_challenge_solution.jpg" alt="Diagramme de la solution"
+            class="rounded-lg w-full" />
         </div>
       </div>
     </div>
@@ -206,7 +229,8 @@
 
       <div class="flex flex-col md:flex-row items-center justify-center mb-8 space-y-4 md:space-y-0 md:space-x-4">
         <label for="student-select" class="text-xl text-ivory">Sélectionnez un élève :</label>
-        <select id="student-select" class="bg-charcoal text-ivory border-2 border-sandy rounded-lg p-2 focus:outline-none">
+        <select id="student-select"
+          class="bg-charcoal text-ivory border-2 border-sandy rounded-lg p-2 focus:outline-none">
           <!-- Options générées par script.js -->
         </select>
       </div>
@@ -227,4 +251,5 @@
   <!-- Site script -->
   <script src="script.js"></script>
 </body>
+
 </html>

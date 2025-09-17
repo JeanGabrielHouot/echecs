@@ -2,7 +2,7 @@
    Site Styles - Club d'Échecs
    =============================== */
 
-:root{
+:root {
   --charcoal: #0b121f;
   --charcoal-light: #1a202c;
   --ivory: #f7f7f1;
@@ -10,27 +10,48 @@
 }
 
 /* Base */
-html, body {
+html,
+body {
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   scroll-behavior: smooth;
 }
 
-.bg-charcoal { background-color: var(--charcoal); }
-.bg-charcoal-light { background-color: var(--charcoal-light); }
-.text-ivory { color: var(--ivory); }
-.text-sandy { color: var(--sandy); }
-.border-sandy { border-color: var(--sandy); }
+.bg-charcoal {
+  background-color: var(--charcoal);
+}
+
+.bg-charcoal-light {
+  background-color: var(--charcoal-light);
+}
+
+.text-ivory {
+  color: var(--ivory);
+}
+
+.text-sandy {
+  color: var(--sandy);
+}
+
+.border-sandy {
+  border-color: var(--sandy);
+}
 
 /* Containers */
-.container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
 /* Links */
-.nav-link:hover { color: var(--sandy); }
+.nav-link:hover {
+  color: var(--sandy);
+}
 
 /* Titles */
 .section-title {
   color: var(--sandy);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Cards */
@@ -43,18 +64,42 @@ html, body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
 
+
 /* Background pattern (hero) */
-.bg-pattern {
+/*.bg-pattern {
   background-image: url('https://placehold.co/1200x800/0b121f/ffc560?text=Echiquier');
+  background-image: url('images/duel_street-800.webp');
   background-size: cover;
   background-position: center;
 }
+*/
+
+.bg-pattern {
+  background-image: url('images/groupe_hero_baner.webp');
+  /* mobile par défaut */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1024px) {
+  .bg-pattern {
+    background-image: url('images/groupe_hero_baner.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: middle center;
+  }
+}
+
+
 
 /* Utility (if needed) */
-.shadow-inner { box-shadow: inset 0 2px 6px rgba(0,0,0,.25); }
+.shadow-inner {
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, .25);
+}
 
 /* Accessibility */
 #solution-button:focus,

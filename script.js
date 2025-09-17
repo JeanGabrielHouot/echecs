@@ -26,6 +26,7 @@ document.getElementById('solution-button')?.addEventListener('click', function (
 // ===============================
 
 // Fake dataset (can be replaced by a fetch from your backend/Excel export)
+
 const matches = [
   { id: 1, date: '2024-01-15', player1: 'Jean Dupont', player2: 'Marie Lefèvre', result: 'win' },   // Jean gagne
   { id: 2, date: '2024-01-20', player1: 'Thomas Martin', player2: 'Marie Lefèvre', result: 'win' }, // Thomas gagne
@@ -34,6 +35,7 @@ const matches = [
   { id: 5, date: '2024-02-05', player1: 'Thomas Martin', player2: 'Marie Lefèvre', result: 'draw' },// Nul
   { id: 6, date: '2024-02-10', player1: 'Jean Dupont', player2: 'Thomas Martin', result: 'win' },   // Jean gagne
 ];
+
 
 const initialElo = 1200;
 const kFactor = 32;

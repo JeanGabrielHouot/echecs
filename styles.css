@@ -108,3 +108,21 @@ body {
   outline: 2px solid var(--sandy);
   outline-offset: 2px;
 }
+
+.chess-embed {
+  max-width: 800px;
+  margin: 0 auto;
+  /* centre horizontalement */
+}
+
+.chess-embed iframe {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* carré, responsive */
+  border: 0;
+}
+
+.chess-embed .open-full {
+  text-align: center;
+  margin: 8px 0 0;
+}
